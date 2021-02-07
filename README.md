@@ -1,5 +1,5 @@
 # HahnApplication
-HAHN Application Process Using Auriela, Webpack, Typescript and Dot Net Core Backend
+HAHN Application Process Using Auriela, Webpack, Typescript and Dot Net 5 Backend
 
 Start the Front End application by doing this in windows: 
 Open Terminal
