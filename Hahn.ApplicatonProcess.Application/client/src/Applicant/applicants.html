@@ -1,0 +1,43 @@
+
+
+<template>
+  <center><h5>List Of Applicants</h5></center>
+  <p><a route-href="route: ApplicantCreate;" class="btn btn-success btn-sm">Add New Applicant</a></p>
+   
+  <p if.bind="!applicants"><em>Loading...</em></p>
+  
+  <table if.bind="applicants" class="table table-bordered table-condensed table-hover">
+    <thead>
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Country</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Hired</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody id="form-list-client-body">
+          <tr repeat.for="applicant of applicants">
+              <td>${ applicant.id }</td>
+              <td>${ applicant.name } ${applicant.familyName}</td>
+              <td>${ applicant.countryOfOrigin }</td>
+              <td>${ applicant.eMailAdress }</td>
+              <td>${ applicant.age }</td>
+              <td>${ applicant.hired }</td>
+              <td><a  route-href="route: applicantdetail; params.bind: {id:applicant.id}" click.delegate="select($applicant)">
+                <i class="fas fa-edit"></i>
+                <small>Edit</small>
+              </a>
+              <a click.delegate="$parent.remove(applicant)" href="#">
+                <i class="fas fa-trash"></i>
+                <small>Remove</small>
+              </a></td>
+          </tr>
+      </tbody>
+  </table>
+</template>
+
+
+    

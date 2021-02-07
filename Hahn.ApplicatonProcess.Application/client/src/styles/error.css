@@ -1,0 +1,27 @@
+/**.form-group.has-error {
+  display: block;
+  border-style: solid;
+  border-width: thin;
+  border-color: red;
+}
+**/
+
+.form-group.has-error input   {
+  border-style: solid;
+  border-width: thin;
+  border-color: red;
+  color:red;
+}
+.form-group .col-md-6 .has-error{
+  display: block;
+  color:darkred;
+
+}
+.help-block{
+  color:red;
+}
+/**input[type=text] {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+**/
